@@ -44,7 +44,9 @@ function renderTag(tagText) {
     htmlTag: tag
   });
   const tagsWrapper = document.querySelector('.tags__wrapper');
-  tagsWrapper.appendChild(tag);
+  setTimeout(() => {
+    tagsWrapper.appendChild(tag);
+  }, 0);
 }
 
 function createTag(tagText){
@@ -63,6 +65,9 @@ function createTag(tagText){
 
 function deleteTag(tagValue) {
   const index = tagsList.findIndex(({tagText}) => tagText === tagValue);
-  tagsList[index].htmlTag.remove();
-  tagsList.splice(index, 1);
+  tagsList[index].htmlTag.classList.add('fadeOut');
+  setTimeout(() => {
+    tagsList[index].htmlTag.remove();
+    tagsList.splice(index, 1);
+  }, 250);
 }

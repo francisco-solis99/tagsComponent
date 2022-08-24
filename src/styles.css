@@ -57,10 +57,40 @@ body {
   align-items: center;
   font-size: 1.1rem;
   background-color: #92A2B8;
+  animation: fadeIn 0.50s ease-in;
 }
 
 .tag span {
+  margin-bottom: 1em;
   align-self: flex-start;
   cursor: pointer;
+  transition: all 200ms ease-in;
 }
 
+.tag span:hover {
+  border-radius: 50%;
+  background-color: #cccccc;
+}
+
+
+.tag.fadeOut {
+  animation: fadeOut 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
