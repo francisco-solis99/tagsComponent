@@ -6,3 +6,87 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.app {
+  display: grid;
+  align-content: center;
+  background-color: #1E293B;
+  min-height: 100vh;
+}
+
+.tags__component{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.tags__title {
+  margin-top: 0;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.tags__zone {
+  display: flex;
+  /* flex-direction: column; */
+  background-color: #334155;
+}
+
+.tags__input {
+  flex-grow: 1;
+  padding: 0.75em;
+  font-size: 1.2rem;
+  background-color: #334155;
+  border: 0;
+  outline: none;
+  color: #fff;
+}
+
+.tags__wrapper {
+  display: flex;
+}
+
+.tag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 .25em;
+  min-width: 50px;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: #92A2B8;
+}
+
+.tag + .tag {
+  margin-left: 0.25em;
+}
+
+.tag p {
+  margin: .75em .25em 0;
+}
+
+.tag span {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* @media screen and (max-width: 650px) {
+  .tags__zone {
+    flex-direction: column;
+  }
+
+  .tags__wrapper {
+    flex-wrap: wrap;
+    gap: 0.25em;
+  }
+
+  .tag {
+    width: auto;
+  }
+
+  .tag + .tag {
+    margin: 0;
+  }
+
+} */
