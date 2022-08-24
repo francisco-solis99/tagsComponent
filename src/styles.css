@@ -29,7 +29,7 @@ body {
 
 .tags__zone {
   display: flex;
-  /* flex-direction: column; */
+  flex-wrap: wrap;
   background-color: #334155;
 }
 
@@ -45,25 +45,18 @@ body {
 
 .tags__wrapper {
   display: flex;
+  gap: 0.25em;
+  flex-wrap: wrap;
 }
 
 .tag {
-  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 .25em;
+  padding: .25em;
   min-width: 50px;
   align-items: center;
   font-size: 1.1rem;
   background-color: #92A2B8;
-}
-
-.tag + .tag {
-  margin-left: 0.25em;
-}
-
-.tag p {
-  margin: .75em .25em 0;
 }
 
 .tag span {
@@ -71,22 +64,3 @@ body {
   cursor: pointer;
 }
 
-/* @media screen and (max-width: 650px) {
-  .tags__zone {
-    flex-direction: column;
-  }
-
-  .tags__wrapper {
-    flex-wrap: wrap;
-    gap: 0.25em;
-  }
-
-  .tag {
-    width: auto;
-  }
-
-  .tag + .tag {
-    margin: 0;
-  }
-
-} */
